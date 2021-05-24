@@ -16,9 +16,10 @@ class CategorySeeder extends Seeder
     public function run()
     {
         //
-		for ($i = 0; $i < 10; $i++) {
+		 $arrCate = ['Mạng máy tính', 'Kiểm thử phần mềm', 'Phát triển ứng dụng trên web','Phát triển ứng dụng trên mobile'];
+		for ($i = 0; $i < count($arrCate); $i++) {
             DB::table('categories')->insert([
-                'category_name' => Str::random(10),
+                'category_name' => $arrCate[$i],
             ]);
         }
 		
