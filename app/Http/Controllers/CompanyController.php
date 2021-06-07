@@ -17,6 +17,10 @@ class CompanyController extends Controller
         $per_page = $request->input('per_page');
         $obj = new Company();
         $companies = $obj->paginate($per_page);
-        return view('companies', ['companies' => $companies]);
+        $test  = $obj ->find(1);
+
+//        dd($test->toArray());
+//        die($test);
+        return view('layout', ['companies' => $companies]);
     }
 }

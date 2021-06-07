@@ -6,7 +6,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
-class CategorySeeder extends Seeder
+class PermissionSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,14 +15,12 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        //
-		 $arrCate = ['Mạng máy tính', 'Kiểm thử phần mềm', 'Phát triển ứng dụng trên web','Phát triển ứng dụng trên mobile'];
-		for ($i = 0; $i < count($arrCate); $i++) {
-            DB::table('categories')->insert([
-                'category_name' => $arrCate[$i],
+        $arrPermissionName = ['read','modify','none','add'];
+        for ($i = 0; $i < count($arrPermissionName); $i++) {
+            DB::table('permissions')->insert([
+                'permission_name' => $arrPermissionName[$i],
                 'status' =>random_int(0,1),
             ]);
         }
-
     }
 }

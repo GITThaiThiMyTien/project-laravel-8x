@@ -107,6 +107,11 @@
       <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
       <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
       <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/.git/hooks" />
+      <path value="$PROJECT_DIR$/vendor/.git/logs" />
+      <path value="$PROJECT_DIR$/vendor/.git/objects" />
+      <path value="$PROJECT_DIR$/vendor/.git/refs" />
+      <path value="$PROJECT_DIR$/vendor/.git/info" />
     </include_path>
   </component>
   <component name="PhpUnit">

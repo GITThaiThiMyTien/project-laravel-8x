@@ -12,6 +12,7 @@ class Category extends Model
     public $primaryKey = "category_id";
     protected $table = 'categories';
 
+
     function companies()
     {
         return $this->hasMany("App\Models\Company", "category_id");

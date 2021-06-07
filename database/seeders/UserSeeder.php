@@ -6,7 +6,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
-class CategorySeeder extends Seeder
+class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,13 +16,13 @@ class CategorySeeder extends Seeder
     public function run()
     {
         //
-		 $arrCate = ['Mạng máy tính', 'Kiểm thử phần mềm', 'Phát triển ứng dụng trên web','Phát triển ứng dụng trên mobile'];
-		for ($i = 0; $i < count($arrCate); $i++) {
-            DB::table('categories')->insert([
-                'category_name' => $arrCate[$i],
+        for ($i = 0; $i < 500; $i++) {
+            DB::table('users')->insert([
+                'name' => Str::random(10),
+                'password' => Str::random(10),
+                'email' => Str::random(5) . '@gmail.com',
                 'status' =>random_int(0,1),
             ]);
         }
-
     }
 }

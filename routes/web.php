@@ -32,7 +32,9 @@ Route::get('/search', [SearchController::class, 'searchCompany']);
 Route::fallback(function () {
     return view('404');
 })->name('NotFound');
-
+//Route::get('/', function () {
+//    return view('layout');
+//});
 Route::get('/error', function () {
     return view('error');
 })->name('Error');
